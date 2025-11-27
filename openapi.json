@@ -1,0 +1,103 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Password Generator20",
+    "version": "1.0.0",
+    "description": "RapidAPI: marook332-tgQpJK5rj/password-generator20"
+  },
+  "servers": [
+    {
+      "url": "https://password-generator20.p.rapidapi.com"
+    }
+  ],
+  "paths": {
+    "/password": {
+      "get": {
+        "summary": "password",
+        "description": "Generates a password with standard settings - length = 10 - 1 special char - 2 numbers",
+        "operationId": "password",
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "required": false,
+            "description": "Creates a password with the given length, max length is 32 chars",
+            "schema": {
+              "type": "string",
+              "default": "10",
+              "enum": null
+            }
+          },
+          {
+            "name": "spchar",
+            "in": "query",
+            "required": false,
+            "description": "Number of special characters to be used",
+            "schema": {
+              "type": "string",
+              "default": "2",
+              "enum": null
+            }
+          },
+          {
+            "name": "numbers",
+            "in": "query",
+            "required": false,
+            "description": "Number of digits to be used",
+            "schema": {
+              "type": "string",
+              "default": "2",
+              "enum": null
+            }
+          },
+          {
+            "name": "umlauts",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "quantity",
+            "in": "query",
+            "required": false,
+            "description": "Number of passwords issued, max is 10 per call.",
+            "schema": {
+              "type": "string",
+              "default": "10",
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-RapidAPI-Key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiAuth": []
+    }
+  ]
+}

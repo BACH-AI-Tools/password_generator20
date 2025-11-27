@@ -30,7 +30,7 @@ Visit **[EMCP Platform](https://sit-emcp.kaleido.guru)** now to start your MCP j
 
 ## Introduction
 
-This is an automatically generated MCP server using [FastMCP](https://fastmcp.wiki) for accessing the Password Generator20 API.
+This is an MCP server for accessing the Password Generator20 API.
 
 - **PyPI Package**: `bach-password_generator20`
 - **Version**: 1.0.0
@@ -108,8 +108,8 @@ export API_KEY="your_api_key_here"
 {
   "mcpServers": {
     "password_generator20": {
-      "command": "python",
-      "args": ["E:\path\to\password_generator20\server.py"],
+      "command": "uvx",
+      "args": ["--from", "bach-password_generator20", "bach_password_generator20"],
       "env": {
         "API_KEY": "your_api_key_here"
       }
