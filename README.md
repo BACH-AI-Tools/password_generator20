@@ -33,7 +33,7 @@
 这是一个 MCP 服务器，用于访问 Password Generator20 API。
 
 - **PyPI 包名**: `bach-password_generator20`
-- **版本**: 1.0.0
+- **版本**: 2.0.0
 - **传输协议**: stdio
 
 
@@ -160,4 +160,4 @@ Generates a password with standard settings - length = 10 - 1 special char - 2 n
 
 此服务器由 [API-to-MCP](https://github.com/BACH-AI-Tools/api-to-mcp) 工具自动生成。
 
-版本: 1.0.0
+版本: 2.0.0
